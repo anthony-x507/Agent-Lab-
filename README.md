@@ -83,12 +83,12 @@ Proyecto de experimentación personal de Anthony Sanchez / ABACO. Código y nota
 
 Plan completo: [`docs/lora_plan.md`](docs/lora_plan.md).
 
-**Cuándo lanzarlo:** cuando tengas `data/scenes/` con ~200+ escenas (`synthetic_physics_dataset.py`) y el 8B Thinking 4-bit ya cacheado en la M4.
+**Cuándo lanzarlo:** cuando tengas `data/scenes/` con ~200+ escenas mixtas (caídas + figuras nuevas + entrelazamiento + superposición) y el 8B Thinking 4-bit ya cacheado en la M4.
 
 **Qué esperar:** ~2–3 h en M4 128 GB (rank 32, 3 epochs, QLoRA). El adapter queda en `data/lora_adapter/` (megabytes). Éxito = +20 puntos en tasa Jev APROBAR sobre 10 escenas de prueba vs el base.
 
 ```bash
-python examples/synthetic_physics_dataset.py --n-scenes 220 --out data/scenes --seed 42
+python examples/synthetic_physics_dataset.py --n-scenes 280 --out data/scenes --seed 42
 python examples/train_lora.py --rank 32 --alpha 32 --lr 2e-4 --epochs 3
 python examples/eval_lora.py --adapter data/lora_adapter --n-test 10
 ```
