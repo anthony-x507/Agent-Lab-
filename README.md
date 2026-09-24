@@ -1,5 +1,7 @@
 # Agent Lab
 
+**Plan maestro:** [`docs/PLAN-MAESTRO.md`](docs/PLAN-MAESTRO.md) (fases 0–5: dataset → LoRA → QEC → cableado → experimento).
+
 Laboratorio local (sin nube de pago) para experimentar con **visión + razonamiento + árbitro Jev + simulador cuántico** en un clúster de dos Macs Apple Silicon unidos por **Tailscale**.
 
 Repositorio hermano de código ejecutable: [`quantum-llm-lab`](https://github.com/anthony-x507/quantum-llm-lab). Aquí documentamos la visión, el estado del clúster y los resultados de los ciclos.
