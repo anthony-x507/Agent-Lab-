@@ -103,5 +103,7 @@ model, processor = load(
 )
 ```
 
+Fase 3 (QEC): [`docs/quantum_error_correction.md`](docs/quantum_error_correction.md) — `python examples/qec_robustness.py --self-test`.
+
 Nota: el entrenamiento usa **mlx-vlm** (VLM), no solo mlx-lm; Qwen3-VL necesita el stack de visión.
 
