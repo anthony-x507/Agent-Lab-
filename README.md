@@ -50,7 +50,8 @@ Detalle de la metáfora cuántica → LLM: ver [`docs/vision-cuantica-llm.md`](d
 ## Estado actual (2026-09-23)
 
 - Lab ejecutable en `quantum-llm-lab` tip `e4f2928` (dataset sintético + cluster README).
-- Primer ciclo de 5 escenas con el **8B Thinking** en la M4: **en curso** (instalación mlx-vlm + descarga del modelo). El log vivo irá en `data/experiment_log.jsonl`.
+- Primer ciclo de 5 escenas con el **8B Thinking** en la M4: **en curso** (descarga HF).
+- Plan LoRA listo (`docs/lora_plan.md` + `train_lora.py` / `eval_lora.py`); ejecutar tras dataset+modelo. (instalación mlx-vlm + descarga del modelo). El log vivo irá en `data/experiment_log.jsonl`.
 - Mac Studio: Tailscale **offline** (~20 días); el ranker 2B/4B espera a que vuelva.
 - Sin Cloud Agents para este carril (crédito Cursor); todo local / `gh`.
 
@@ -77,3 +78,30 @@ python examples/vision_grounding.py --mlx \
 ## Licencia / uso
 
 Proyecto de experimentación personal de Anthony Sanchez / ABACO. Código y notas en español.
+
+## Fine-tune con LoRA
+
+Plan completo: [`docs/lora_plan.md`](docs/lora_plan.md).
+
+**Cuándo lanzarlo:** cuando tengas `data/scenes/` con ~200+ escenas (`synthetic_physics_dataset.py`) y el 8B Thinking 4-bit ya cacheado en la M4.
+
+**Qué esperar:** ~2–3 h en M4 128 GB (rank 32, 3 epochs, QLoRA). El adapter queda en `data/lora_adapter/` (megabytes). Éxito = +20 puntos en tasa Jev APROBAR sobre 10 escenas de prueba vs el base.
+
+```bash
+python examples/synthetic_physics_dataset.py --n-scenes 220 --out data/scenes --seed 42
+python examples/train_lora.py --rank 32 --alpha 32 --lr 2e-4 --epochs 3
+python examples/eval_lora.py --adapter data/lora_adapter --n-test 10
+```
+
+**Cargar el adapter:**
+
+```python
+from mlx_vlm import load
+model, processor = load(
+    "mlx-community/Qwen3-VL-8B-Thinking-4bit",
+    adapter_path="data/lora_adapter",
+)
+```
+
+Nota: el entrenamiento usa **mlx-vlm** (VLM), no solo mlx-lm; Qwen3-VL necesita el stack de visión.
+

@@ -4,3 +4,6 @@ __pycache__/
 data/scenes/**
 !data/scenes/.gitkeep
 .DS_Store
+data/lora_adapter/**
+!data/lora_adapter/.gitkeep
+data/lora_dataset.jsonl
