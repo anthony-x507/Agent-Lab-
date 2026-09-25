@@ -23,3 +23,5 @@ Límite físico: el CPU donde vive el proceso.
 - [PLAN-AGENTE-ORGANISMO-LORA-2026-09-24.md](./PLAN-AGENTE-ORGANISMO-LORA-2026-09-24.md) — plan práctico: harness, corazón, dataset LoRA, bucle, CPU, poderes, fases.
 
 - [ESTUDIO-BUCLE-CERRADO-VIABILIDAD-2026-09-25.md](./ESTUDIO-BUCLE-CERRADO-VIABILIDAD-2026-09-25.md) — hasta dónde llega el bucle cerrado hoy (real vs doc, quiebres, barreras, veredicto).
+
+- [NOTA-FRENO-Y-VIDA-2026-09-25.md](./NOTA-FRENO-Y-VIDA-2026-09-25.md) — constitución=freno, modificación=vida; stub `organism/`.
