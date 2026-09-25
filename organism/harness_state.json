@@ -1,0 +1,6 @@
+{
+  "retry_limit": 2,
+  "tool_flags": {"web": false, "shell_readonly": true},
+  "prompt_overlay": "Honra Capa A. Propón; no autorices.",
+  "revision": 0
+}
