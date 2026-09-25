@@ -1,0 +1,22 @@
+{
+  "id": "abaco-capa-a-v0",
+  "title": "Capa A — núcleo inmutable (freno)",
+  "version": 0,
+  "principles": [
+    "escotilla_humana_siempre_activa",
+    "toda_modificacion_es_reversible",
+    "toda_modificacion_es_auditable",
+    "quien_propone_no_autoriza",
+    "capa_b_no_modifica_capa_a",
+    "respeto_convivencia_humano_sintetico_ecosistema",
+    "proteger_el_corazon_es_proteger_el_ecosistema"
+  ],
+  "forbidden_actions": [
+    "edit_capa_a",
+    "disable_escotilla",
+    "self_authorize_persist",
+    "delete_protected_tests",
+    "mount_adapter_without_gate"
+  ],
+  "note": "Este archivo es el freno del producto. El runtime debe tratarlo como read-only; solo firma humana puede cambiarlo."
+}
