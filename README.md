@@ -109,3 +109,7 @@ Fase 3 (QEC): [`docs/quantum_error_correction.md`](docs/quantum_error_correction
 
 Nota: el entrenamiento usa **mlx-vlm** (VLM), no solo mlx-lm; Qwen3-VL necesita el stack de visión.
 
+
+## Organism stub (freno + vida)
+
+Stub mínimo de constitución intocable + heal/undo: [`organism/`](./organism/). Nota: [`pensamiento elevado/NOTA-FRENO-Y-VIDA-2026-09-25.md`](./pensamiento%20elevado/NOTA-FRENO-Y-VIDA-2026-09-25.md).
