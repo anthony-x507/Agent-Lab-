@@ -17,3 +17,7 @@ Carpeta de hipótesis y constitución viva para agentes Abaco (Anthony × ABACO 
 El corazón no cambia; todo lo demás cambia para merecer ese corazón.  
 Quien aprende no autoriza. Proteger el corazón es proteger el ecosistema.  
 Límite físico: el CPU donde vive el proceso.
+
+## Plan de implementación
+
+- [PLAN-AGENTE-ORGANISMO-LORA-2026-09-24.md](./PLAN-AGENTE-ORGANISMO-LORA-2026-09-24.md) — plan práctico: harness, corazón, dataset LoRA, bucle, CPU, poderes, fases.
