@@ -1,3 +1,5 @@
+> **Nota:** La transcripción literaria limpia está en [TRANSCRIPCION-LIMPIA-2026-09-24.md](./TRANSCRIPCION-LIMPIA-2026-09-24.md). Este archivo queda como resumen esquemático.
+
 # Conversación — pensamiento elevado (2026-09-24, ~21:59–22:16 ET)
 
 **Participantes:** Anthony Sanchez · ABACO LEADER (Grok Bot)  
